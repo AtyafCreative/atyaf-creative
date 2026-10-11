@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="أطياف مبدعة | Atyaf Creative — استوديو متخصص في خدمات التصميم الإبداعي والتعليم الرقمي. نُبدع هويات بصرية ونتيح محتوى تعليمياً احترافياً." />
+  <meta name="keywords" content="تصميم, هوية بصرية, تعليم رقمي, دورات تدريبية, أطياف مبدعة, Atyaf Creative" />
+  <meta name="author" content="Atyaf Creative" />
+  <title>أطياف مبدعة | Atyaf Creative</title>
+
+  <!-- خطوط عربية عصرية من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- ملف التنسيق -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- أيقونة الموقع (Favicon) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A8%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body>
+  <!-- ===== شريط التنقل ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand" data-page="home" aria-label="أطياف مبدعة | Atyaf Creative — الصفحة الرئيسية">
+        <img src="Logo.jpg.jpg" alt="" class="brand-logo" width="1024" height="572" />
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active" data-page="home">الرئيسية</a>
+        <a href="#about" class="nav-link" data-page="about">من نحن</a>
+        <a href="#design" class="nav-link" data-page="design">خدمات التصميم</a>
+
+        <!-- عنصر منسدل: التعليم الرقمي -->
+        <div class="nav-dropdown" id="eduDropdown">
+          <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            التعليم الرقمي
+            <span class="dropdown-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="dropdown-menu" id="dropdownMenu">
+            <li>
+              <a href="#english-courses" class="dropdown-link" data-page="english-courses">
+                <span class="dropdown-icon">🗣️</span>
+                دورات اللغة الإنجليزية
+              </a>
+            </li>
+            <li>
+              <a href="#education" class="dropdown-link" data-page="education">
+                <span class="dropdown-icon">🎨</span>
+                دورات أخرى (التصميم والتعليم الرقمي)
+              </a>
+            </li>
+            <li>
+              <a href="#books" class="dropdown-link" data-page="books">
+                <span class="dropdown-icon">📚</span>
+                الكتب والمصادر التعليمية
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="#portfolio" class="nav-link" data-page="portfolio">أعمالنا</a>
+        <a href="#payment-methods" class="nav-link" data-page="payment">طرق الدفع</a>
+        <a href="#booking" class="nav-link nav-link-cta" data-page="booking">الحجز والطلب</a>
+        <a href="#contact" class="nav-link" data-page="contact">تواصل معنا</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary nav-cta" data-page="contact">ابدأ مشروعك</a>
+
+      <button class="hamburger" id="hamburger" aria-label="القائمة" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== شريط التصفية الديناميكي (Filter Bar) ===== -->
+  <div class="filter-bar" id="filterBar">
+    <div class="container filter-bar-inner">
+      <span class="filter-label">القسم الحالي:</span>
+      <strong class="filter-current" id="filterCurrent">الرئيسية</strong>
+      <a href="#home" class="filter-home" data-page="home">← الرئيسية</a>
+    </div>
+  </div>
+
+  <!-- طبقة تعتيم خلف قائمة الجوال -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== القسم الرئيسي (Hero) ===== -->
+  <section class="hero page-section" data-page="home" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">
+          <span class="pulse-dot"></span>
+          نُبدع لنُلوّن عالمك بأفكارٍ مبتكرة
+        </span>
+        <h1 class="hero-title">
+          نحوّل أفكارك إلى
+          <span class="gradient-text">تجارب بصرية مذهلة</span>
+        </h1>
+        <p class="hero-subtitle">
+          في <strong>أطياف مبدعة</strong> نجمع بين احتراف التصميم الإبداعي وقوة التعليم الرقمي،
+          لنقدّم لك هوية بصرية فريدة ودورات تدريبية عالية الجودة تُنقل مهاراتك إلى مستوى آخر.
+        </p>
+        <div class="hero-actions">
+          <a href="#design" class="btn btn-primary btn-lg">استكشف خدماتنا</a>
+          <a href="#education" class="btn btn-outline btn-lg">الدورات التدريبية</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="250">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">مشروع منجز</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="1200">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">متدرّب ومتدرّبة</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="98">0</span><span class="stat-plus">%</span>
+            <span class="stat-label">رضا العملاء</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card hero-card-main">
+          <div class="hero-card-glow" aria-hidden="true"></div>
+          <div class="hero-illustration">
+            <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم توضيحي للتصميم الإبداعي">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c3aed"/>
+                  <stop offset="100%" stop-color="#06b6d4"/>
+                </linearGradient>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f59e0b"/>
+                  <stop offset="100%" stop-color="#ec4899"/>
+                </linearGradient>
+              </defs>
+              <rect x="60" y="40" width="280" height="200" rx="16" fill="url(#grad1)" opacity="0.15"/>
+              <rect x="80" y="65" width="240" height="150" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+              <rect x="80" y="65" width="240" height="28" rx="12" fill="#f1f5f9"/>
+              <circle cx="100" cy="79" r="5" fill="#ec4899"/>
+              <circle cx="118" cy="79" r="5" fill="#f59e0b"/>
+              <circle cx="136" cy="79" r="5" fill="#22c55e"/>
+              <rect x="96" y="110" width="90" height="12" rx="6" fill="url(#grad1)"/>
+              <rect x="96" y="132" width="140" height="10" rx="5" fill="#e2e8f0"/>
+              <rect x="96" y="150" width="120" height="10" rx="5" fill="#e2e8f0"/>
+              <rect x="96" y="176" width="80" height="26" rx="13" fill="url(#grad2)"/>
+              <g transform="rotate(35 300 200)">
+                <rect x="292" y="120" width="16" height="70" rx="8" fill="url(#grad2)"/>
+                <path d="M292 190 L308 190 L300 214 Z" fill="#7c3aed"/>
+              </g>
+              <g transform="translate(230 210)">
+                <circle cx="20" cy="20" r="18" fill="#7c3aed"/>
+                <circle cx="60" cy="20" r="18" fill="#06b6d4"/>
+                <circle cx="100" cy="20" r="18" fill="#f59e0b"/>
+                <circle cx="40" cy="58" r="18" fill="#ec4899"/>
+                <circle cx="80" cy="58" r="18" fill="#22c55e"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero-card hero-card-float float-1">
+          <div class="mini-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <strong>هوية بصرية</strong>
+            <span>تصميم شعارات احترافية</span>
+          </div>
+        </div>
+
+        <div class="hero-card hero-card-float float-2">
+          <div class="mini-icon mini-icon-2">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <strong>تعليم رقمي</strong>
+            <span>دورات تفاعلية مُعتمدة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== شريط الميزات السريعة ===== -->
+  <section class="features-strip page-section" data-page="home">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🎯</div>
+        <h3>رؤية دقيقة</h3>
+        <p>نفهم جمهورك ونصمّم بما يحقّق أهدافك.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⚡</div>
+        <h3>تسليم سريع</h3>
+        <p>نلتزم بالمواعيد دون التضحية بالجودة.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💡</div>
+        <h3>أفكار مبتكرة</h3>
+        <p>حلول إبداعية خارج الصندوق دائماً.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🤝</div>
+        <h3>دعم مستمر</h3>
+        <p>مرافقة كاملة قبل وبعد التسليم.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== من نحن ===== -->
+  <section class="section about page-section" data-page="about" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">من نحن</span>
+        <h2 class="section-title">قصة <span class="gradient-text">أطياف مبدعة</span></h2>
+        <p class="section-desc">
+          نحن استوديو إبداعي يجمع بين شغف التصميم والتكنولوجيا والتعليم، لنصنع محتوى بصرياً يجذب الأنظار
+          ونُشارك معرفتنا مع مجتمعٍ متحمّس للتعلّم والنمو.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-image-card card-1">
+            <div class="emoji-large">🎨</div>
+          </div>
+          <div class="about-image-card card-2">
+            <div class="emoji-large">📚</div>
+          </div>
+          <div class="about-badge">
+            <span class="about-badge-num">5+</span>
+            <span class="about-badge-text">سنوات<br/>من الإبداع</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h3>نُبدع الفكرة… ونُتقن التنفيذ</h3>
+          <p>
+            بدأت رحلتنا من إيمانٍ بسيط: أن الإبداع ليس حكراً على أحد. نعمل على تمكين الأفراد والشركات
+            بأدوات التصميم الحديثة، ونساعد المتعلّمين على اكتساب مهارات رقمية تُواكب متطلبات سوق العمل.
+          </p>
+          <ul class="about-list">
+            <li>
+              <span class="check-icon">✓</span>
+              فريق من المصمّمين والمدرّبين المعتمدين
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              حلول مخصّصة تناسب هوية كل عميل
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              محتوى تعليمي عملي ومحدَّث باستمرار
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              التزام بأعلى معايير الجودة والاحترافية
+            </li>
+          </ul>
+          <a href="#portfolio" class="btn btn-primary">شاهد أعمالنا</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== خدمات التصميم ===== -->
+  <section class="section design page-section" data-page="design" id="design">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag tag-design">خدماتنا</span>
+        <h2 class="section-title">خدمات <span class="gradient-text">التصميم الإبداعي</span></h2>
+        <p class="section-desc">
+          نُقدّم باقة متكاملة من خدمات التصميم التي تمنح علامتك التجارية حضوراً قوياً ومميزاً.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="service-card">
+          <div class="service-icon icon-design-1">🖌️</div>
+          <h3>تصميم الهوية البصرية</h3>
+          <p>نصمّم شعاراً وهوية بصرية متكاملة تعبّر عن قيم علامتك التجارية وتميّزك عن المنافسين.</p>
+          <a href="#contact" class="card-link">اطلب الخدمة <span class="arrow">←</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-design-2">📱</div>
+          <h3>تصميم واجهات المستخدم</h3>
+          <p>واجهات تطبيقات ومواقع عصرية ترتقي بتجربة المستخدم وتحقّق أعلى معدلات التفاعل.</p>
+          <a href="#contact" class="card-link">اطلب الخدمة <span class="arrow">←</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-design-3">🖼️</div>
+          <h3>تصميم السوشيال ميديا</h3>
+          <p>محتوى بصري جذّاب لمنصّات التواصل يعزّز تواجدك الرقمي ويبني جمهوراً متفاعلاً.</p>
+          <a href="#contact" class="card-link">اطلب الخدمة <span class="arrow">←</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-design-4">📦</div>
+          <h3>تصميم العبوات والتغليف</h3>
+          <p>تصاميم تغليف إبداعية تجعل منتجك يتصدّد الأرفف ويترك انطباعاً لا يُنسى.</p>
+          <a href="#contact" class="card-link">اطلب الخدمة <span class="arrow">←</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-design-5">🎬</div>
+          <h3>الموشن جرافيك</h3>
+          <p>فيديوهات ورسوماً متحركة تُحوّل رسالتك إلى قصة بصرية آسرة ومؤثّرة.</p>
+          <a href="#contact" class="card-link">اطلب الخدمة <span class="arrow">←</span></a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon icon-design-6">📄</div>
+          <h3>تصميم المطبوعات</h3>
+          <p>بروشورات، بروفايلات، وكتيبات بتصاميم احترافية تُبرز رسالتك بأفضل صورة.</p>
+          <a href="#contact" class="card-link">اطلب الخدمة <span class="arrow">←</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== التعليم الرقمي ===== -->
+  <section class="section education page-section" data-page="education" id="education">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag tag-edu">التعليم الرقمي</span>
+        <h2 class="section-title">دوراتنا <span class="gradient-text">التدريبية</span></h2>
+        <p class="section-desc">
+          برامج تدريبية عملية تُؤهّلك لسوق العمل، بإشراف مدرّبين متخصصين ومحتوى تفاعلي مُحدَّث.
+        </p>
+      </div>
+
+      <div class="courses-grid">
+        <article class="course-card">
+          <div class="course-header course-header-1">
+            <span class="course-level">مبتدئ</span>
+            <div class="course-icon">🎓</div>
+          </div>
+          <div class="course-body">
+            <h3>أساسيات التصميم الجرافيكي</h3>
+            <p>تعلّم مبادئ التصميم والألوان والخطوط وأساسيات برامج التصميم الاحترافية.</p>
+            <ul class="course-meta">
+              <li>⏱️ 20 ساعة</li>
+              <li>📚 12 درساً</li>
+              <li>🎫 شهادة حضور</li>
+            </ul>
+            <a href="#contact" class="btn btn-soft btn-block">سجّل الآن</a>
+          </div>
+        </article>
+
+        <article class="course-card course-card-featured">
+          <span class="course-ribbon">الأكثر طلباً</span>
+          <div class="course-header course-header-2">
+            <span class="course-level">متوسط</span>
+            <div class="course-icon">✍️</div>
+          </div>
+          <div class="course-body">
+            <h3>احتراف تصميم الهوية</h3>
+            <p>من الفكرة إلى التنفيذ: كيف تبني هوية بصرية متكاملة ومتماسكة لعلامتك التجارية.</p>
+            <ul class="course-meta">
+              <li>⏱️ 32 ساعة</li>
+              <li>📚 18 درساً</li>
+              <li>🏆 مشروع تطبيقي</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block">سجّل الآن</a>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-header course-header-3">
+            <span class="course-level">متقدم</span>
+            <div class="course-icon">🎥</div>
+          </div>
+          <div class="course-body">
+            <h3>الموشن جرافيك الاحترافي</h3>
+            <p>أتقن فن الرسوم المتحركة وصناعة الفيديوهات الترويجية والتفسيرية الجذّابة.</p>
+            <ul class="course-meta">
+              <li>⏱️ 40 ساعة</li>
+              <li>📚 22 درساً</li>
+              <li>🎫 شهادة معتمدة</li>
+            </ul>
+            <a href="#contact" class="btn btn-soft btn-block">سجّل الآن</a>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <div class="course-header course-header-4">
+            <span class="course-level">للجميع</span>
+            <div class="course-icon">🧠</div>
+          </div>
+          <div class="course-body">
+            <h3>التصميم بالذكاء الاصطناعي</h3>
+            <p>استخدم أدوات الذكاء الاصطناعي لتسريع إبداعك وإنتاج تصاميم مبهرة في دقائق.</p>
+            <ul class="course-meta">
+              <li>⏱️ 16 ساعة</li>
+              <li>📚 10 دروس</li>
+              <li>⚡ تدريب عملي</li>
+            </ul>
+            <a href="#contact" class="btn btn-soft btn-block">سجّل الآن</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== دورات وبرامج اللغة الإنجليزية ===== -->
+  <section class="section english page-section" data-page="english-courses" id="english-courses">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag tag-edu">التعليم الرقمي والدورات الأكاديمية</span>
+        <h2 class="section-title">دورات وبرامج <span class="gradient-text">اللغة الإنجليزية</span></h2>
+        <p class="section-desc">
+          برامج متكاملة لتعلّم وإتقان اللغة الإنجليزية بأسلوب تفاعلي عصري،
+          من تأسيس المناهج الدراسية حتى الاحتراف الكامل — بإشراف مدرّبين متخصصين.
+        </p>
+      </div>
+
+      <div class="eng-grid">
+        <!-- باقة المجموعة -->
+        <article class="eng-card package-card">
+          <div class="eng-card-top eng-top-1">
+            <div class="eng-icon">👥</div>
+            <span class="eng-badge">باقة المجموعة</span>
+          </div>
+          <div class="eng-card-body">
+            <div class="package-price">
+              <span class="package-number">150</span>
+              <span class="package-currency">ريال سعودي</span>
+            </div>
+            <p class="package-meta">12 حصة / 3 أيام أسبوعياً</p>
+            <h3>باقة المجموعة</h3>
+            <p>جلسات تعليمية جماعية تفاعلية مع دعم مستمر، مناسبة للطلاب الذين يحبون التعلم الجماعي.</p>
+            <ul class="eng-features">
+              <li><span class="eng-check">✓</span> جلسات جماعية أسبوعية</li>
+              <li><span class="eng-check">✓</span> تدريب تطبيق عملي</li>
+              <li><span class="eng-check">✓</span> متابعة دورية للمتعلّمين</li>
+            </ul>
+            <div class="package-actions">
+              <button type="button" class="btn btn-primary btn-block eng-book-btn" data-course="باقة المجموعة - 150 ريال سعودي">
+                احجز الآن والدفع
+              </button>
+              <a href="#payment-methods" class="package-wallet">محفظة جيب: 807235</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- باقة الثنائية -->
+        <article class="eng-card eng-card-featured package-card">
+          <span class="eng-ribbon">الأكثر طلباً</span>
+          <div class="eng-card-top eng-top-2">
+            <div class="eng-icon">🧑‍🤝‍🧑</div>
+            <span class="eng-badge">باقة الثنائية</span>
+          </div>
+          <div class="eng-card-body">
+            <div class="package-price">
+              <span class="package-number">200</span>
+              <span class="package-currency">ريال سعودي</span>
+            </div>
+            <p class="package-meta">12 حصة / 3 أيام أسبوعياً</p>
+            <h3>الباقة الثنائية</h3>
+            <p>جلسات ثنائية مكثّفة تركز على المحادثة والتطبيق العملي، مع إرشاد شخصي متواصل.</p>
+            <ul class="eng-features">
+              <li><span class="eng-check">✓</span> شرح شخصي + متابعة فردية</li>
+              <li><span class="eng-check">✓</span> تدريب على المحادثة</li>
+              <li><span class="eng-check">✓</span> تقييم مستمر للأداء</li>
+            </ul>
+            <div class="package-actions">
+              <button type="button" class="btn btn-primary btn-block eng-book-btn" data-course="باقة الثنائية - 200 ريال سعودي">
+                احجز الآن والدفع
+              </button>
+              <a href="#payment-methods" class="package-wallet">محفظة جيب: 807235</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- باقة الفردية -->
+        <article class="eng-card package-card">
+          <div class="eng-card-top eng-top-3">
+            <div class="eng-icon">🎓</div>
+            <span class="eng-badge">باقة الفردية</span>
+          </div>
+          <div class="eng-card-body">
+            <div class="package-price">
+              <span class="package-number">300</span>
+              <span class="package-currency">ريال سعودي</span>
+            </div>
+            <p class="package-meta">12 حصة / 3 أيام أسبوعياً</p>
+            <h3>الباقة الفردية</h3>
+            <p>دراسة متخصّصة على مستوى الفرد مع خطة تدريبية كاملة ومتابعة دقيقة لتحقيق أهدافك.</p>
+            <ul class="eng-features">
+              <li><span class="eng-check">✓</span> جلسات فردية مخصصة</li>
+              <li><span class="eng-check">✓</span> خطة تعليمية شخصية</li>
+              <li><span class="eng-check">✓</span> دعم كامل حتى الإنجاز</li>
+            </ul>
+            <div class="package-actions">
+              <button type="button" class="btn btn-primary btn-block eng-book-btn" data-course="باقة الفردية - 300 ريال سعودي">
+                احجز الآن والدفع
+              </button>
+              <a href="#payment-methods" class="package-wallet">محفظة جيب: 807235</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ===== صندوق طرق الدفع والتحويل البنكي ===== -->
+      <div class="payment-box reveal">
+        <div class="payment-box-head">
+          <div class="payment-icon">💳</div>
+          <div>
+            <h3>طرق الدفع والتحويل البنكي</h3>
+            <p>اختر باقتك المفضلة ثم أكمل الدفع عبر نموذج الحجز أو محفظة جيب رقم الحساب 807235، ثم أرسل الإيصال للتأكيد.</p>
+          </div>
+        </div>
+
+        <div class="payment-body">
+          <!-- خطوات الدفع -->
+          <ol class="payment-steps">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <strong>اختر الدورة</strong>
+                <span>اضغط زر «احجز الآن» على الدورة المطلوبة بالأعلى.</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <strong>أتمِم التحويل البنكي</strong>
+                <span>حوّل قيمة الدورة إلى الحساب البنكي أدناه (تحويل يدوي).</span>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <strong>أرسل إيصال التحويل</strong>
+                <span>أرفق صورة الإيصال إلى بريد الموقع الرسمي مع بياناتك.</span>
+              </div>
+            </li>
+          </ol>
+
+          <!-- بيانات الحساب البنكي -->
+          <div class="bank-details">
+            <h4>🏦 بيانات الحساب للتحويل</h4>
+            <ul class="bank-list">
+              <li>
+                <span class="bank-label">اسم البنك</span>
+                <span class="bank-value" dir="rtl">البنك الأهلي السعودي</span>
+              </li>
+              <li>
+                <span class="bank-label">اسم الحساب</span>
+                <span class="bank-value">أطياف مبدعة للتدريب</span>
+              </li>
+              <li>
+                <span class="bank-label">رقم الآيبان</span>
+                <span class="bank-value bank-copy" dir="ltr">SA00 0000 0000 0000 0000 0000</span>
+              </li>
+              <li>
+                <span class="bank-label">رقم الحساب</span>
+                <span class="bank-value bank-copy" dir="ltr">00000000000000</span>
+              </li>
+            </ul>
+            <div class="bank-note">
+              <span class="note-icon">📧</span>
+              <div>
+                <strong>أرسل إيصال التحويل إلى:</strong>
+                <a href="mailto:Atyaf.creative.info@gmail.com?subject=إيصال%20تحويل%20-%20حجز%20دورة%20لغة%20إنجليزية" class="bank-email" dir="ltr">Atyaf.creative.info@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-footer">
+          <p>جاهز للحجز؟ املأ نموذج الحجز والتواصل وسنؤكّد مقعدك في أقرب وقت.</p>
+          <a href="#contact" class="btn btn-outline btn-lg eng-contact-btn">📝 نموذج الحجز والتواصل</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== الكتب والمصادر التعليمية المبسّطة ===== -->
+  <section class="section books page-section" data-page="books" id="books">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">مكتبتنا التعليمية</span>
+        <h2 class="section-title">الكتب والمصادر <span class="gradient-text">التعليمية المبسّطة</span></h2>
+        <p class="section-desc">
+          مجموعة منتقاة من الكتب المبسّطة لتعلّم اللغة الإنجليزية بسهولة وأناقة،
+          مصمّمة خصيصاً للأطفال والكبار — من القواعد إلى الصوتيات والمهارات الأربع.
+        </p>
+      </div>
+
+      <div class="books-grid">
+        <!-- كتاب 1: القواعد المبسّطة للأطفال -->
+        <article class="book-card">
+          <div class="book-cover book-cover-1">
+            <div class="book-spine"></div>
+            <div class="book-emoji">🧒</div>
+            <span class="book-tag">للأطفال</span>
+          </div>
+          <div class="book-info">
+            <h3>القواعد المبسّطة للأطفال</h3>
+            <p>كتاب تفاعلي يُقدّم قواعد اللغة الإنجليزية بأسلوب مبسّط ومرح يناسب الأطفال.</p>
+            <ul class="book-meta">
+              <li>📖 80 صفحة</li>
+              <li>👶 من 6 سنوات</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block book-btn" data-course="كتاب القواعد المبسّطة للأطفال">
+              🛒 احصل على نسختك
+            </button>
+          </div>
+        </article>
+
+        <!-- كتاب 2: القواعد المبسّطة للكبار -->
+        <article class="book-card">
+          <div class="book-cover book-cover-2">
+            <div class="book-spine"></div>
+            <div class="book-emoji">🎯</div>
+            <span class="book-tag">للكبار</span>
+          </div>
+          <div class="book-info">
+            <h3>القواعد المبسّطة للكبار</h3>
+            <p>شرح واضح ومختصر لقواعد الإنجليزية بأمثلة عملية للمبتدئين والمتقدمين.</p>
+            <ul class="book-meta">
+              <li>📖 150 صفحة</li>
+              <li>🎓 جميع المستويات</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block book-btn" data-course="كتاب القواعد المبسّطة للكبار">
+              🛒 احصل على نسختك
+            </button>
+          </div>
+        </article>
+
+        <!-- كتاب 3: تأسيس الصوتيات -->
+        <article class="book-card">
+          <div class="book-cover book-cover-3">
+            <div class="book-spine"></div>
+            <div class="book-emoji">🔤</div>
+            <span class="book-tag">تأسيس</span>
+          </div>
+          <div class="book-info">
+            <h3>تأسيس الصوتيات (Phonics)</h3>
+            <p>دليل عملي لتعلّم أصوات الحروف والنطق الصحيح من الصفر بتمارين تفاعلية.</p>
+            <ul class="book-meta">
+              <li>📖 100 صفحة</li>
+              <li>🔊 تدريب صوتي</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block book-btn" data-course="كتاب تأسيس الصوتيات Phonics">
+              🛒 احصل على نسختك
+            </button>
+          </div>
+        </article>
+
+        <!-- كتاب 4: المهارات الأربع -->
+        <article class="book-card book-card-featured">
+          <span class="book-ribbon">الأكثر طلباً</span>
+          <div class="book-cover book-cover-4">
+            <div class="book-spine"></div>
+            <div class="book-emoji">🗣️</div>
+            <span class="book-tag">المهارات الأربع</span>
+          </div>
+          <div class="book-info">
+            <h3>المهارات الأربع المتكاملة</h3>
+            <p>كتاب شامل يجمع الاستماع والتحدّث والقراءة والكتابة في منهج واحد متوازن.</p>
+            <ul class="book-meta">
+              <li>📖 200 صفحة</li>
+              <li>🏆 مع تطبيقات</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block book-btn" data-course="كتاب المهارات الأربع المتكاملة">
+              🛒 احصل على نسختك
+            </button>
+          </div>
+        </article>
+
+        <!-- كتاب 5: المفردات والتراكيب -->
+        <article class="book-card">
+          <div class="book-cover book-cover-5">
+            <div class="book-spine"></div>
+            <div class="book-emoji">📚</div>
+            <span class="book-tag">مفردات</span>
+          </div>
+          <div class="book-info">
+            <h3>المفردات والتراكيب</h3>
+            <p>قامس مبسّط للمفردات والجمل الأكثر استخداماً في الحياة اليومية والمهنية.</p>
+            <ul class="book-meta">
+              <li>📖 130 صفحة</li>
+              <li>💼 استخدام عملي</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block book-btn" data-course="كتاب المفردات والتراكيب">
+              🛒 احصل على نسختك
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- إشارة لنظام الطلب والدفع -->
+      <div class="books-payment-note reveal">
+        <span class="note-icon">💳</span>
+        <div class="books-note-text">
+          <strong>كيف تحصل على كتابك؟</strong>
+          <p>اضغط زر «احصل على نسختك» على الكتاب المطلوب، ثم أتمّم التحويل البنكي وأرسل إيصاله عبر نموذج الحجز — تماماً كالدورات.</p>
+        </div>
+        <a href="#english-courses" class="btn btn-soft">تفاصيل الدفع والتحويل</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الطلب والحجز والتحويل البنكي ===== -->
+  <section class="section booking page-section" data-page="booking" id="booking">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">الطلب والحجز</span>
+        <h2 class="section-title">نموذج <span class="gradient-text">الحجز والتحويل البنكي</span></h2>
+        <p class="section-desc">
+          املأ النموذج بالأسفل لتأكيد طلبك أو حجزك، مع بيانات التحويل البنكي.
+          تُرسل بياناتك مباشرة إلينا وسنؤكّد استلامها في أقرب وقت.
+        </p>
+      </div>
+
+      <div class="booking-grid">
+        <!-- عمود معلومات الحسابات البنكية -->
+        <aside class="bank-panel reveal">
+          <div class="bank-panel-head">
+            <div class="bank-panel-icon">🏦</div>
+            <div>
+              <h3>معلومات الحساب البنكي</h3>
+              <p>طرق التحويل المتاحة للدفع اليدوي</p>
+            </div>
+          </div>
+
+          <div class="bank-account">
+            <span class="bank-account-label">اسم البنك</span>
+            <span class="bank-account-value">البنك الأهلي السعودي</span>
+          </div>
+          <div class="bank-account">
+            <span class="bank-account-label">اسم صاحب الحساب</span>
+            <span class="bank-account-value">أطياف مبدعة للتدريب</span>
+          </div>
+          <div class="bank-account">
+            <span class="bank-account-label">رقم الآيبان (IBAN)</span>
+            <button type="button" class="copy-field" data-copy="SA00 0000 0000 0000 0000 0000" dir="ltr">
+              <span class="copy-text">SA00 0000 0000 0000 0000 0000</span>
+              <span class="copy-icon" aria-hidden="true">⧉</span>
+            </button>
+          </div>
+          <div class="bank-account">
+            <span class="bank-account-label">رقم الحساب</span>
+            <button type="button" class="copy-field" data-copy="00000000000000" dir="ltr">
+              <span class="copy-text">00000000000000</span>
+              <span class="copy-icon" aria-hidden="true">⧉</span>
+            </button>
+          </div>
+
+          <div class="bank-panel-note">
+            <span class="note-icon">📧</span>
+            <div>
+              <strong>أرسل إيصال التحويل إلى:</strong>
+              <a href="mailto:Atyaf.creative.info@gmail.com" class="bank-panel-email" dir="ltr">Atyaf.creative.info@gmail.com</a>
+            </div>
+          </div>
+
+          <ol class="bank-steps">
+            <li><span class="step-num">1</span> حوّل قيمة الطلب إلى الحساب أعلاه.</li>
+            <li><span class="step-num">2</span> املأ النموذج بأرقام الحوالة.</li>
+            <li><span class="step-num">3</span> سنؤكّد حجزك عبر بريدك فوراً.</li>
+          </ol>
+        </aside>
+
+        <!-- عمود نموذج الطلب والحجز -->
+        <div class="booking-form-wrap reveal">
+          <form
+            class="booking-form"
+            id="bookingForm"
+            action="https://formsubmit.co/Atyaf.creative.info@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+            novalidate>
+
+            <!-- إعدادات FormSubmit -->
+            <input type="hidden" name="_subject" value="طلب حجز جديد من موقع أطياف مبدعة" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style="display:none" />
+
+            <h3 class="booking-form-title">📝 بيانات الطلب</h3>
+
+            <div class="form-group">
+              <label for="bk-name">الاسم الكامل <span class="req">*</span></label>
+              <input type="text" id="bk-name" name="الاسم الكامل" placeholder="اكتب اسمك الكامل" required />
+            </div>
+
+            <div class="form-group">
+              <label for="bk-email">البريد الإلكتروني <span class="req">*</span></label>
+              <input type="email" id="bk-email" name="البريد الإلكتروني" placeholder="example@mail.com" dir="ltr" required />
+            </div>
+
+            <div class="form-group">
+              <label for="bk-product">المنتج / الدورة المطلوبة <span class="req">*</span></label>
+              <select id="bk-product" name="المنتج المطلوب" required>
+                <option value="" disabled selected>اختر المنتج أو الدورة…</option>
+                <optgroup label="دورات اللغة الإنجليزية">
+                  <option value="دورة: دورات المناهج المدرسية">دورات المناهج المدرسية</option>
+                  <option value="دورة: دورات المهارات الأربع">دورات المهارات الأربع</option>
+                  <option value="دورة: دبلوم اللغة الإنجليزية الشامل">دبلوم اللغة الإنجليزية الشامل</option>
+                </optgroup>
+                <optgroup label="الكتب والمصادر">
+                  <option value="كتاب: القواعد المبسّطة للأطفال">القواعد المبسّطة للأطفال</option>
+                  <option value="كتاب: القواعد المبسّطة للكبار">القواعد المبسّطة للكبار</option>
+                  <option value="كتاب: تأسيس الصوتيات Phonics">تأسيس الصوتيات (Phonics)</option>
+                  <option value="كتاب: المهارات الأربع المتكاملة">المهارات الأربع المتكاملة</option>
+                  <option value="كتاب: المفردات والتراكيب">المفردات والتراكيب</option>
+                </optgroup>
+                <optgroup label="خدمات التصميم والتعليم الرقمي">
+                  <option value="خدمة: خدمات التصميم الإبداعي">خدمات التصميم الإبداعي</option>
+                  <option value="خدمة: دورة تدريبية (التعليم الرقمي)">دورة تدريبية (التعليم الرقمي)</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <!-- طريقة الدفع -->
+            <div class="form-group">
+              <label>طريقة الدفع <span class="req">*</span></label>
+              <div class="pay-method">
+                <label class="pay-method-option">
+                  <input type="radio" name="طريقة الدفع" value="محفظة جيب (Jeeb)" required />
+                  <span class="pay-method-box">
+                    <span class="pay-method-icon pay-method-jeeb">
+                      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="4" y="12" width="40" height="28" rx="6" fill="url(#jeebGrad2)"/>
+                        <rect x="4" y="19" width="40" height="4" fill="#1e1b4b" opacity="0.35"/>
+                        <circle cx="34" cy="30" r="3.5" fill="#fbbf24"/>
+                        <rect x="9" y="28" width="12" height="3" rx="1.5" fill="#ffffff" opacity="0.85"/>
+                        <defs>
+                          <linearGradient id="jeebGrad2" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#22c55e"/>
+                            <stop offset="100%" stop-color="#0ea5e9"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="pay-method-text">
+                      <strong>محفظة جيب</strong>
+                      <span>Jeeb — تحويل فوري</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="pay-method-option">
+                  <input type="radio" name="طريقة الدفع" value="تحويل بنكي" required />
+                  <span class="pay-method-box">
+                    <span class="pay-method-icon pay-method-bank">🏦</span>
+                    <span class="pay-method-text">
+                      <strong>تحويل بنكي</strong>
+                      <span>Bank Transfer</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- رقم الحوالة (اختياري إذا تم إرفاق إيصال) -->
+            <div class="form-group">
+              <label for="bk-transfer">رقم الحوالة / مرجع التحويل</label>
+              <input type="text" id="bk-transfer" name="رقم الحوالة أو مرجع التحويل" placeholder="مثال: 807235 أو اسم المحوّل وتاريخه" dir="auto" />
+            </div>
+
+            <!-- إرفاق صورة الإيصال (اختياري إذا كُتب رقم الحوالة) -->
+            <div class="form-group">
+              <label for="bk-receipt">إرفاق صورة إيصال التحويل</label>
+              <div class="file-upload">
+                <input type="file" id="bk-receipt" name="صورة إيصال التحويل" accept="image/*" />
+                <label for="bk-receipt" class="file-upload-label">
+                  <span class="file-upload-icon">📎</span>
+                  <span class="file-upload-text" id="fileName">اختر صورة الإيصال (اختياري)</span>
+                </label>
+              </div>
+              <p class="field-hint">يمكنك إرفاق صورة الإيصال <strong>أو</strong> كتابة رقم الحوالة أعلاه (أحدهما يكفي).</p>
+            </div>
+
+            <div class="form-group">
+              <label for="bk-notes">ملاحظات إضافية (اختياري)</label>
+              <textarea id="bk-notes" name="ملاحظات" rows="3" placeholder="أي تفاصيل إضافية تريد إخبارنا بها…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="bookingSubmitBtn">
+              إرسال الطلب
+            </button>
+            <p class="booking-status" id="bookingStatus" role="status"></p>
+
+            <p class="booking-privacy">
+              🔒 بياناتك تُرسل بشكل آمن، وتُستخدم فقط لمعالجة طلبك.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== طرق الدفع والتحويل المالي ===== -->
+  <section class="section payment page-section" data-page="payment" id="payment-methods">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">طرق الدفع</span>
+        <h2 class="section-title">الدفع و<span class="gradient-text">التحويل المالي</span></h2>
+        <p class="section-desc">
+          اختر الطريقة الأنسب لك لإتمام عملية الدفع. نوفّر التحويل البنكي ومحفظة جيب
+          لتسهيل العملية على جميع عملائنا، مع إمكانية إرفاق الإيصال لتأكيد الطلب.
+        </p>
+      </div>
+
+      <div class="payment-methods-grid">
+        <!-- بطاقة محفظة جيب (Jeeb Wallet) — البطاقة المميّزة -->
+        <article class="pay-card pay-card-jeeb reveal">
+          <div class="pay-card-glow" aria-hidden="true"></div>
+          <div class="pay-card-head">
+            <div class="pay-logo pay-logo-jeeb">
+              <!-- شعار جيب المبسّط -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="4" y="12" width="40" height="28" rx="6" fill="url(#jeebGrad)"/>
+                <rect x="4" y="19" width="40" height="4" fill="#1e1b4b" opacity="0.35"/>
+                <circle cx="34" cy="30" r="3.5" fill="#fbbf24"/>
+                <rect x="9" y="28" width="12" height="3" rx="1.5" fill="#ffffff" opacity="0.85"/>
+                <defs>
+                  <linearGradient id="jeebGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#22c55e"/>
+                    <stop offset="100%" stop-color="#0ea5e9"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="pay-card-title">
+              <h3>محفظة جيب</h3>
+              <span class="pay-card-sub">Jeeb Wallet — تحويل فوري وسهل</span>
+            </div>
+            <span class="pay-badge">الأسرع</span>
+          </div>
+
+          <div class="pay-fields">
+            <div class="pay-field">
+              <span class="pay-field-label">اسم الحساب</span>
+              <div class="pay-field-row">
+                <span class="pay-field-value">أ....ا...ع......ن..</span>
+                <button type="button" class="pay-copy" data-copy="أ....ا...ع......ن.." aria-label="نسخ اسم الحساب">⧉</button>
+              </div>
+            </div>
+            <div class="pay-field">
+              <span class="pay-field-label">رقم الحساب</span>
+              <div class="pay-field-row">
+                <span class="pay-field-value pay-number" dir="ltr">807235</span>
+                <button type="button" class="pay-copy" data-copy="807235" aria-label="نسخ رقم الحساب">⧉</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pay-steps">
+            <h4>خطوات التحويل عبر جيب</h4>
+            <ol>
+              <li><span class="pay-step-num">1</span> افتح تطبيق جيب واختر «تحويل».</li>
+              <li><span class="pay-step-num">2</span> أدخل رقم المحفظة الظاهر أعلاه.</li>
+              <li><span class="pay-step-num">3</span> أرفق صورة الإيصال في نموذج الحجز.</li>
+            </ol>
+          </div>
+
+          <a href="#booking" class="btn btn-primary btn-block pay-action" data-page="booking">
+            🧾 إرفاق الإيصال وإتمام الطلب
+          </a>
+        </article>
+
+        <!-- بطاقة التحويل البنكي -->
+        <article class="pay-card pay-card-bank reveal">
+          <div class="pay-card-head">
+            <div class="pay-logo pay-logo-bank">🏦</div>
+            <div class="pay-card-title">
+              <h3>التحويل البنكي</h3>
+              <span class="pay-card-sub">Bank Transfer — تحويل يدوي</span>
+            </div>
+            <span class="pay-badge pay-badge-bank">موثوق</span>
+          </div>
+
+          <div class="pay-fields">
+            <div class="pay-field">
+              <span class="pay-field-label">اسم البنك</span>
+              <div class="pay-field-row">
+                <span class="pay-field-value">البنك الأهلي السعودي</span>
+              </div>
+            </div>
+            <div class="pay-field">
+              <span class="pay-field-label">اسم صاحب الحساب</span>
+              <div class="pay-field-row">
+                <span class="pay-field-value">أطياف مبدعة للتدريب</span>
+              </div>
+            </div>
+            <div class="pay-field">
+              <span class="pay-field-label">رقم الآيبان (IBAN)</span>
+              <div class="pay-field-row">
+                <span class="pay-field-value pay-number" dir="ltr">SA00 0000 0000 0000 0000 0000</span>
+                <button type="button" class="pay-copy" data-copy="SA00 0000 0000 0000 0000 0000" aria-label="نسخ رقم الآيبان">⧉</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="pay-steps">
+            <h4>خطوات التحويل البنكي</h4>
+            <ol>
+              <li><span class="pay-step-num">1</span> حوّل قيمة الطلب إلى الحساب أعلاه.</li>
+              <li><span class="pay-step-num">2</span> احتفظ بصورة إيصال التحويل.</li>
+              <li><span class="pay-step-num">3</span> أرفق الإيصال في نموذج الحجز.</li>
+            </ol>
+          </div>
+
+          <a href="#booking" class="btn btn-soft btn-block pay-action" data-page="booking">
+            🏦 إرفاق الإيصال وإتمام الطلب
+          </a>
+        </article>
+      </div>
+
+      <!-- تنبيه عام -->
+      <div class="payment-general-note reveal">
+        <span class="note-icon">💡</span>
+        <div>
+          <strong>مهم:</strong>
+          بعد إتمام التحويل، يُرجى إرسال <span class="highlight">صورة إيصال التحويل</span> مع اسمك
+          والدورة/الكتاب المطلوب عبر نموذج الحجز، ليتم تأكيد طلبك فوراً.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== معرض الأعمال ===== -->
+  <section class="section portfolio page-section" data-page="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">أعمالنا</span>
+        <h2 class="section-title">مختارات من <span class="gradient-text">إبداعاتنا</span></h2>
+        <p class="section-desc">
+          نماذج من المشاريع التي نُسعدنا بتنفيذها لعملائنا في مجالات متنوّعة.
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <article class="portfolio-item item-tall">
+          <div class="portfolio-thumb thumb-1">
+            <span class="portfolio-emoji">☕</span>
+          </div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">هوية بصرية</span>
+            <h3>مقهى "دلال"</h3>
+          </div>
+        </article>
+
+        <article class="portfolio-item">
+          <div class="portfolio-thumb thumb-2">
+            <span class="portfolio-emoji">👟</span>
+          </div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">سوشيال ميديا</span>
+            <h3>حملة "خطوة"</h3>
+          </div>
+        </article>
+
+        <article class="portfolio-item">
+          <div class="portfolio-thumb thumb-3">
+            <span class="portfolio-emoji">📱</span>
+          </div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">واجهات تطبيق</span>
+            <h3>تطبيق "رفيق"</h3>
+          </div>
+        </article>
+
+        <article class="portfolio-item item-wide">
+          <div class="portfolio-thumb thumb-4">
+            <span class="portfolio-emoji">🌿</span>
+          </div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">تغليف</span>
+            <h3>منتجات "نقاء" الطبيعية</h3>
+          </div>
+        </article>
+
+        <article class="portfolio-item">
+          <div class="portfolio-thumb thumb-5">
+            <span class="portfolio-emoji">🎵</span>
+          </div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">موشن جرافيك</span>
+            <h3>فيديو "إيقاع"</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== آراء العملاء ===== -->
+  <section class="section testimonials page-section" data-page="home" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">آراء العملاء</span>
+        <h2 class="section-title">ماذا يقول <span class="gradient-text">عملاؤنا؟</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <figure class="testimonial-card">
+          <div class="stars" aria-label="تقييم 5 من 5">★★★★★</div>
+          <blockquote>
+            "تجربة رائعة! الهوية البصرية التي صمّموها لنا تجاوزت توقعاتنا وعكست روح علامتنا بدقة."
+          </blockquote>
+          <figcaption class="testimonial-author">
+            <div class="avatar avatar-1">س</div>
+            <div>
+              <strong>سارة العتيبي</strong>
+              <span>مؤسسة متجر إلكتروني</span>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial-card">
+          <div class="stars" aria-label="تقييم 5 من 5">★★★★★</div>
+          <blockquote>
+            "الدورة التدريبية غيّرت مساري المهني بالكامل. محتوى عملي ومدرّب متمكّن ودعم مستمر."
+          </blockquote>
+          <figcaption class="testimonial-author">
+            <div class="avatar avatar-2">م</div>
+            <div>
+              <strong>محمد الحربي</strong>
+              <span>مصمّم مستقل</span>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="testimonial-card">
+          <div class="stars" aria-label="تقييم 5 من 5">★★★★★</div>
+          <blockquote>
+            "احترافية عالية والتزام بالمواعيد. أصبحوا شريكنا الموثوق في كل ما يتعلق بالتصميم."
+          </blockquote>
+          <figcaption class="testimonial-author">
+            <div class="avatar avatar-3">ن</div>
+            <div>
+              <strong>نورة القحطاني</strong>
+              <span>مديرة تسويق</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== دعوة للتواصل (CTA) ===== -->
+  <section class="cta-section page-section" data-page="home">
+    <div class="container cta-box">
+      <div class="cta-content">
+        <h2>جاهز لتحويل فكرتك إلى واقع مبدع؟</h2>
+        <p>تواصل معنا اليوم ودعنا نبدأ رحلة الإبداع معاً. استشارتك الأولى مجاناً!</p>
+      </div>
+      <a href="#contact" class="btn btn-light btn-lg">تواصل معنا الآن</a>
+    </div>
+  </section>
+
+  <!-- ===== تواصل معنا ===== -->
+  <section class="section contact page-section" data-page="contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">تواصل معنا</span>
+        <h2 class="section-title">لنبدأ <span class="gradient-text">التواصل</span></h2>
+        <p class="section-desc">
+          أرسل لنا رسالتك وسنعود إليك في أقرب وقت. يسعدنا دائماً سماع أفكارك.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div>
+              <span class="info-label">البريد الإلكتروني</span>
+              <a href="mailto:Atyaf.creative.info@gmail.com" class="info-value" dir="ltr">Atyaf.creative.info@gmail.com</a>
+            </div>
+          </div>
+          <div class="info-item whatsapp-item">
+            <div class="info-icon whatsapp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="واتساب">
+                <path d="M12.04 2C6.59 2 2.17 6.36 2.17 11.74c0 1.93.56 3.82 1.54 5.44L2 22l4.93-1.64c1.56.85 3.35 1.31 5.11 1.31h.01c5.45 0 9.87-4.36 9.87-9.74C21.92 6.36 17.5 2 12.04 2zm5.51 13.51c-.24.68-1.42 1.27-1.94 1.35-.49.08-1.11.12-3.58-.77-3.04-1.17-5-4.12-5.15-4.3-.15-.18-1.23-1.64-1.23-3.12 0-1.48.78-2.2 1.05-2.49.27-.29.58-.36.78-.36h.56c.17 0 .4.01.62.47.27.57.9 1.95.98 2.09.08.14.13.31.02.5-.11.18-.17.3-.34.47-.17.17-.35.39-.5.53-.17.17-.35.34-.15.66.2.31.89 1.47 1.91 2.38 1.31 1.17 2.42 1.52 2.77 1.69.35.17.56.14.77-.09.2-.22.87-.99 1.11-1.33.24-.34.48-.29.81-.17.34.12 2.13 1 2.5 1.18.37.18.62.27.71.42.09.15.09.86-.15 1.53z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="info-label">واتساب</span>
+              <a href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D9%85%20%D8%A3%D9%8F%D8%AF%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D9%8A%D8%A7%D9%8B%D9%84%D8%A9%20%D8%B9%D9%86%20%D8%A3%D8%B7%D9%8A%D8%A7%D9%81%20%D9%85%D9%8A%D8%AF%D8%8C%20%D8%A7%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D8%B2%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A8%D8%A9" class="info-value whatsapp-link" dir="ltr" aria-label="الدخول إلى واتساب @Atyaf_creative">@Atyaf_creative</a>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="منصة X / تويتر">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="إنستغرام">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="لينكد إن">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">الاسم الكامل</label>
+              <input type="text" id="name" name="name" placeholder="اكتب اسمك هنا" required />
+            </div>
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email" placeholder="example@mail.com" dir="ltr" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">نوع الخدمة</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>اختر الخدمة المطلوبة</option>
+              <option value="design">خدمات التصميم</option>
+              <option value="course">التعليم الرقمي / الدورات</option>
+              <option value="other">استفسار آخر</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">رسالتك</label>
+            <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">إرسال الرسالة</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== التذييل ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand" aria-label="أطياف مبدعة | Atyaf Creative — الصفحة الرئيسية">
+          <img src="Logo.jpg.jpg" alt="" class="brand-logo footer-logo" width="1024" height="572" />
+        </a>
+        <p class="footer-desc">
+          استوديو إبداعي يجمع بين التصميم والتعليم الرقمي لنمنح علامتك حضوراً مميزاً ونُشاركك رحلة التعلّم.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#design">خدمات التصميم</a></li>
+          <li><a href="#portfolio">أعمالنا</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="#design">هوية بصرية</a></li>
+          <li><a href="#design">واجهات المستخدم</a></li>
+          <li><a href="#design">سوشيال ميديا</a></li>
+          <li><a href="#education">دورات تدريبية</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>تواصل</h4>
+        <ul>
+          <li><a href="mailto:Atyaf.creative.info@gmail.com" dir="ltr">Atyaf.creative.info@gmail.com</a></li>
+          <li><a href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%87%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D9%85%20%D8%A3%D9%8F%D8%AF%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D9%8A%D8%A7%D9%8B%D9%84%D8%A9%20%D8%B9%D9%86%20%D8%A3%D8%B7%D9%8A%D8%A7%D9%81%20%D9%85%D9%8A%D8%AF%D8%8C%20%D8%A7%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D8%B2%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A8%D8%A9" dir="ltr">@Atyaf_creative</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year">2026</span> أطياف مبدعة | Atyaf Creative. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button class="scroll-top" id="scrollTop" aria-label="العودة للأعلى">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
