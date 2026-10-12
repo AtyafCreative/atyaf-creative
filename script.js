@@ -271,47 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ----- 10) التحقق من نموذج التواصل وإرساله ----- */
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const SITE_EMAIL = 'Atyaf.creative.info@gmail.com';
-  const TELEGRAM_BOT_TOKEN = '8975133729:AAFzh1QrRbTfCrIaPv51-39N_GawQkOSPCI';
-  const TELEGRAM_CHAT_ID = '8927596888';
-
-  const escapeTelegramHtml = (value = '') => String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-
-  const sendTelegramNotification = async (payload) => {
-    const message = [
-      '<b>🧾 طلب جديد من موقع أطياف مبدعة</b>',
-      `<b>👤 الاسم:</b> ${escapeTelegramHtml(payload.name)}`,
-      `<b>📧 البريد:</b> ${escapeTelegramHtml(payload.email)}`,
-      `<b>🎓 المنتج / الدورة:</b> ${escapeTelegramHtml(payload.product)}`,
-      `<b>💳 طريقة الدفع:</b> ${escapeTelegramHtml(payload.paymentMethod)}`,
-      `<b>🔢 رقم الحوالة / المرجع:</b> ${escapeTelegramHtml(payload.reference || 'غير مذكور')}`,
-      `<b>📎 إيصال مرفق:</b> ${payload.hasReceipt ? 'نعم' : 'لا'}`,
-      `<b>📝 ملاحظات:</b> ${escapeTelegramHtml(payload.notes || 'لا توجد')}`,
-      `<b>⏰ الوقت:</b> ${escapeTelegramHtml(new Date().toLocaleString('ar-EG'))}`
-    ].join('\n');
-
-    const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-      body: new URLSearchParams({
-        chat_id: TELEGRAM_CHAT_ID,
-        text: message,
-        parse_mode: 'HTML',
-        disable_web_page_preview: 'true'
-      }).toString()
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Telegram API error: ${response.status} - ${errorText}`);
-    }
-
-    return response.json();
-  };
 
   const showError = (input) => input.classList.add('invalid');
   const clearError = (input) => input.classList.remove('invalid');
@@ -571,49 +530,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        const formData = new FormData(bookingForm);
-        const product = formData.get('المنتج المطلوب') || 'غير محدد';
-        const name = formData.get('الاسم الكامل') || '';
-        const email = formData.get('البريد الإلكتروني') || '';
-        const paymentMethod = formData.get('طريقة الدفع') || 'غير محدد';
-        const transferReference = formData.get('رقم الحوالة أو مرجع التحويل') || 'غير مذكور';
-        const notes = formData.get('ملاحظات') || 'لا توجد';
-        const receiptFile = receiptInput && receiptInput.files && receiptInput.files.length > 0;
-
-        const emailPromise = fetch(bookingForm.action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: formData,
-        });
-
-        const telegramPromise = sendTelegramNotification({
-          name: String(name),
-          email: String(email),
-          product: String(product),
-          paymentMethod: String(paymentMethod),
-          reference: String(transferReference),
-          notes: String(notes),
-          hasReceipt: Boolean(receiptFile)
-        });
-
-        const [emailResponse, telegramResponse] = await Promise.allSettled([
-          emailPromise,
-          telegramPromise
-        ]);
-
-        const emailOk = emailResponse.status === 'fulfilled' && emailResponse.value.ok;
-        const telegramOk = telegramResponse.status === 'fulfilled';
-
-        if (emailOk || telegramOk) {
-          if (bookingStatusEl) {
-            bookingStatusEl.textContent = '✅ تم إرسال طلبك بنجاح! تم توجيه تفاصيل الحجز إلى البريد الإلكتروني وبوت التليجرام.';
-            bookingStatusEl.className = 'booking-status success';
-          }
-          bookingForm.reset();
-          if (fileNameEl) fileNameEl.textContent = 'اختر صورة الإيصال (اختياري)';
-        } else {
-          throw new Error('Both submission methods failed');
+        if (bookingStatusEl) {
+          bookingStatusEl.textContent = '✅ تم إرسال طلبك بنجاح! تم تسجيل بيانات الحجز محلياً داخل الصفحة، ويمكنك إرسالها لاحقاً عبر البريد الإلكتروني.';
+          bookingStatusEl.className = 'booking-status success';
         }
+        bookingForm.reset();
+        if (fileNameEl) fileNameEl.textContent = 'اختر صورة الإيصال (اختياري)';
       } catch (err) {
         if (bookingStatusEl) {
           bookingStatusEl.innerHTML = '⚠️ تعذّر الإرسال التلقائي. أرسل التفاصيل إلى <a href="mailto:Atyaf.creative.info@gmail.com" dir="ltr">Atyaf.creative.info@gmail.com</a>.';
