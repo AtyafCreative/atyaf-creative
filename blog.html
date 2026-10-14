@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="مدونة أطياف مبدعة | Atyaf Creative — مقالات ونصائح في التصميم الإبداعي، تعلّم اللغة الإنجليزية، والتعليم الرقمي." />
+  <meta name="author" content="Atyaf Creative" />
+  <title>المدونة | أطياف مبدعة — Atyaf Creative</title>
+
+  <!-- نفس خطوط الموقع الرئيسي -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- نفس تنسيقات الهوية + تنسيقات المدونة -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blog.css" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A8%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body>
+  <!-- ===== شريط التنقل (نفس تصميم الموقع الرئيسي) ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="أطياف مبدعة | Atyaf Creative — الصفحة الرئيسية">
+        <img src="Logo.jpg.jpg" alt="" class="brand-logo" width="1024" height="572" />
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="index.html#about" class="nav-link">من نحن</a>
+        <a href="index.html#design" class="nav-link">خدمات التصميم</a>
+
+        <!-- عنصر منسدل: التعليم الرقمي -->
+        <div class="nav-dropdown" id="eduDropdown">
+          <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            التعليم الرقمي
+            <span class="dropdown-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="dropdown-menu" id="dropdownMenu">
+            <li>
+              <a href="index.html#english-courses" class="dropdown-link">
+                <span class="dropdown-icon">🗣️</span>
+                دورات اللغة الإنجليزية
+              </a>
+            </li>
+            <li>
+              <a href="index.html#education" class="dropdown-link">
+                <span class="dropdown-icon">🎨</span>
+                دورات أخرى (التصميم والتعليم الرقمي)
+              </a>
+            </li>
+            <li>
+              <a href="index.html#books" class="dropdown-link">
+                <span class="dropdown-icon">📚</span>
+                الكتب والمصادر التعليمية
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="index.html#portfolio" class="nav-link">أعمالنا</a>
+        <a href="blog.html" class="nav-link active">المدونة</a>
+        <a href="index.html#payment-methods" class="nav-link">طرق الدفع</a>
+        <a href="index.html#booking" class="nav-link nav-link-cta">الحجز والطلب</a>
+        <a href="index.html#contact" class="nav-link">تواصل معنا</a>
+      </nav>
+
+      <a href="index.html#booking" class="btn btn-primary nav-cta">ابدأ مشروعك</a>
+
+      <button class="hamburger" id="hamburger" aria-label="القائمة" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- طبقة تعتيم خلف قائمة الجوال -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== ترويسة المدونة (Blog Hero) ===== -->
+  <section class="blog-hero">
+    <div class="container blog-hero-inner">
+      <span class="blog-hero-tag">✍️ مدونة أطياف مبدعة</span>
+      <h1>مقالات ونصائح في <span class="gradient-text">التصميم والتعلّم</span></h1>
+      <p>
+        محتوى تعليمي مبسّط يُلهمك ويساعدك على تطوير مهاراتك في التصميم الإبداعي
+        واللغة الإنجليزية والتعليم الرقمي.
+      </p>
+      <a href="https://atyaf-mobdia.blogspot.com/" class="btn btn-primary btn-lg blog-external-btn" target="_blank" rel="noopener noreferrer">
+        🌐 زيارة المدونة الكاملة
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== شبكة المقالات (Blog Grid) ===== -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-toolbar">
+        <div class="blog-search">
+          <input type="search" id="blogSearch" placeholder="ابحث في المقالات…" aria-label="بحث في المقالات" />
+          <span class="search-icon" aria-hidden="true">🔍</span>
+        </div>
+        <span class="blog-count" id="blogCount">0 مقالاً</span>
+      </div>
+
+      <div class="blog-grid" id="blogGrid">
+        <!-- تُبنى البطاقات تلقائياً عبر blog.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== التذييل (نفس تصميم الموقع الرئيسي) ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="أطياف مبدعة | Atyaf Creative — الصفحة الرئيسية">
+          <img src="Logo.jpg.jpg" alt="" class="brand-logo footer-logo" width="1024" height="572" />
+        </a>
+        <p class="footer-desc">
+          استوديو إبداعي يجمع بين التصميم والتعليم الرقمي لنمنح علامتك حضوراً مميزاً ونُشاركك رحلة التعلّم.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="index.html#about">من نحن</a></li>
+          <li><a href="index.html#design">خدمات التصميم</a></li>
+          <li><a href="index.html#portfolio">أعمالنا</a></li>
+          <li><a href="blog.html">المدونة</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="index.html#design">هوية بصرية</a></li>
+          <li><a href="index.html#design">واجهات المستخدم</a></li>
+          <li><a href="index.html#design">سوشيال ميديا</a></li>
+          <li><a href="index.html#education">دورات تدريبية</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>تواصل</h4>
+        <ul>
+          <li><a href="mailto:Atyaf.creative.info@gmail.com" dir="ltr">Atyaf.creative.info@gmail.com</a></li>
+          <li><a href="https://api.whatsapp.com/send?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D9%8A%D9%84%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%D8%A9%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%87%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AA%D9%8A%20%D8%A5%D9%84%D9%89%20%D9%81%D8%B3%D9%82%D8%AF%D9%83%D9%8A%20%D8%A3%D8%B7%D9%8A%D8%A7%D9%81%D9%8A%20%D9%85%D9%8A%D8%AF%D9%8A%D8%8C" dir="ltr" target="_blank" rel="noopener noreferrer">@Atyaf_creative</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year">2026</span> أطياف مبدعة | Atyaf Creative. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button class="scroll-top" id="scrollTop" aria-label="العودة للأعلى">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="posts/posts-data.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>
+

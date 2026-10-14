@@ -3344,6 +3344,16 @@ a.info-value:hover {
     font-size: 1.3rem;
   }
 
+  /* اختيار طريقة الدفع — عمود واحد على الهواتف */
+  .pay-method {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .pay-method-box {
+    padding: 12px 14px;
+  }
+
   .bank-account {
     padding: 14px 20px;
   }
