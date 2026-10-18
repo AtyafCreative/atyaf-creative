@@ -166,18 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // إغلاق القائمة المنسدلة عند النقر خارجها
   document.addEventListener('click', (e) => {
-    if (eduDropdown && e.target instanceof Node && !eduDropdown.contains(e.target)) {
+    if (eduDropdown && !eduDropdown.contains(e.target)) {
       closeDropdown();
     }
   });
-
-  if (eduDropdown) {
-    eduDropdown.addEventListener('focusout', (e) => {
-      if (e.relatedTarget instanceof Node && !eduDropdown.contains(e.relatedTarget)) {
-        closeDropdown();
-      }
-    });
-  }
 
   // إغلاق القائمة المنسدلة بمفتاح Escape
   document.addEventListener('keydown', (e) => {
@@ -208,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* إغلاق القائمة عند الضغط على أي رابط */
   if (navMenu) {
-    navMenu.querySelectorAll('a.nav-link, .dropdown-link').forEach((link) => {
+    navMenu.querySelectorAll('.nav-link').forEach((link) => {
       link.addEventListener('click', closeMenu);
     });
   }
