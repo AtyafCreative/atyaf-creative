@@ -3317,31 +3317,27 @@ a.info-value:hover {
     border: none;
     margin-block-start: 4px;
     padding-inline-start: 12px;
-    /* مخفية افتراضياً حتى الفتح بالنقر */
     max-height: 0;
     overflow: hidden;
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
     transform: none;
     padding-block: 0;
-    transition: max-height var(--transition);
+    transition: max-height var(--transition), visibility 0s linear 0.3s;
   }
 
   .nav-dropdown.open .dropdown-menu {
-    max-height: 320px;
+    max-height: 400px;
     padding-block: 6px;
+    visibility: visible;
+    transition: max-height var(--transition), visibility 0s;
   }
 
-  /* إلغاء سلوك التمرير على الجوال (النقر فقط) */
-  .nav-dropdown:hover .dropdown-menu {
+  .nav-dropdown:not(.open):hover .dropdown-menu,
+  .nav-dropdown:not(.open):focus-within .dropdown-menu {
     max-height: 0;
     padding-block: 0;
-  }
-
-  .nav-dropdown.open:hover .dropdown-menu,
-  .nav-dropdown.open .dropdown-menu {
-    max-height: 320px;
-    padding-block: 6px;
+    visibility: hidden;
   }
 
   .nav-link:hover,
