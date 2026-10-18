@@ -17,6 +17,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const formStatus   = document.getElementById('formStatus');
   const yearEl = document.getElementById('year');
 
+  /* ----- معرض صور شروحات اللغة الإنجليزية ----- */
+  const lessonGalleryToggle = document.getElementById('lessonGalleryToggle');
+  const lessonGallery = document.getElementById('lessonGallery');
+  const lessonImageDialog = document.getElementById('lessonImageDialog');
+  const lessonImageDialogImage = document.getElementById('lessonImageDialogImage');
+  const lessonImageDialogCaption = document.getElementById('lessonImageDialogCaption');
+  const lessonImageDialogClose = document.getElementById('lessonImageDialogClose');
+
+  if (lessonGalleryToggle && lessonGallery) {
+    lessonGalleryToggle.addEventListener('click', () => {
+      const isExpanded = lessonGalleryToggle.getAttribute('aria-expanded') === 'true';
+      lessonGalleryToggle.setAttribute('aria-expanded', String(!isExpanded));
+      lessonGallery.hidden = isExpanded;
+    });
+  }
+
+  if (
+    lessonImageDialog instanceof HTMLDialogElement &&
+    lessonImageDialogImage instanceof HTMLImageElement &&
+    lessonImageDialogCaption &&
+    lessonImageDialogClose
+  ) {
+    document.querySelectorAll('.lesson-image-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const imageSrc = button.dataset.imageSrc;
+        const imageAlt = button.dataset.imageAlt;
+        if (!imageSrc || !imageAlt) return;
+
+        lessonImageDialogImage.src = imageSrc;
+        lessonImageDialogImage.alt = imageAlt;
+        lessonImageDialogCaption.textContent = imageAlt;
+        lessonImageDialog.showModal();
+      });
+    });
+
+    lessonImageDialogClose.addEventListener('click', () => lessonImageDialog.close());
+    lessonImageDialog.addEventListener('click', (event) => {
+      if (event.target === lessonImageDialog) lessonImageDialog.close();
+    });
+  }
+
   /* ----- 2) سنة التذييل تلقائياً ----- */
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
