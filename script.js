@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* إغلاق القائمة عند الضغط على أي رابط */
   if (navMenu) {
-    navMenu.querySelectorAll('.nav-link, .dropdown-link').forEach((link) => {
+    navMenu.querySelectorAll('a.nav-link, .dropdown-link').forEach((link) => {
       link.addEventListener('click', closeMenu);
     });
   }
