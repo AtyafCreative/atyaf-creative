@@ -29,7 +29,7 @@
   --gradient-text: linear-gradient(135deg, #7c3aed 0%, #06b6d4 60%, #ec4899 100%);
 
   /* الخطوط المحلية لتفادي الاعتماد على خدمات خارجية */
-  --font-body: 'Segoe UI', Tahoma, Arial, san
+  --font-body: 'Segoe UI', Tahoma, Arial, sans-serif;
   --font-heading: 'Segoe UI', Tahoma, Arial, sans-serif;
 
   /* الظلال */
@@ -3267,6 +3267,7 @@ a.info-value:hover {
     inset-block-start: 0;
     inset-inline-end: 0;
     height: 100vh;
+    height: 100dvh;
     width: min(320px, 85vw);
     flex-direction: column;
     align-items: flex-start;
@@ -3275,6 +3276,8 @@ a.info-value:hover {
     background: var(--clr-white);
     padding: calc(var(--nav-height) + 30px) 30px 30px;
     box-shadow: -10px 0 40px rgba(30, 27, 75, 0.15);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     transform: translateX(100%);
     transition: transform var(--transition);
     z-index: 1001;
@@ -3332,13 +3335,6 @@ a.info-value:hover {
     padding-block: 6px;
   }
 
-  /* إلغاء سلوك التمرير على الجوال (النقر فقط) */
-  .nav-dropdown:hover .dropdown-menu {
-    max-height: 0;
-    padding-block: 0;
-  }
-
-  .nav-dropdown.open:hover .dropdown-menu,
   .nav-dropdown.open .dropdown-menu {
     max-height: 320px;
     padding-block: 6px;
